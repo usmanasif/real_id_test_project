@@ -36,12 +36,10 @@ npm test
 
 To get started with the Rtenant app, please follow the instructions below:
 
-1. Extract the project from zip file.
-
-- Use the following command in your command prompt or terminal:
+1. Clone the repository from the github by following command
 
 ```
-git clone project.bundle rtenant
+git clone https://github.com/usmanasif/real_id_test_project
 ```
 
 2. Navigate to the project directory using your command prompt or terminal.
