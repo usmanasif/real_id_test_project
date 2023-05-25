@@ -1,6 +1,8 @@
 import React from "react";
-import NavBar from "./NavBar/Menu";
-import logo from "../../shared/images/logo.png";
+
+import NavBar from "components/Layouts/Header/NavBar/Menu";
+
+import logo from "assets/images/logo.png";
 
 const Header = (props) => {
   const {

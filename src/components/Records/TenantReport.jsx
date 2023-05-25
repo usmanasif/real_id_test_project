@@ -1,18 +1,19 @@
 import React from "react";
-import records from "shared/images/records.jpg";
-import evictionSampleReport from "shared/images/eviction-sample-report-2023.png";
+
 import Banner from "components/Records/RecordList/Banner";
 import RecordCheckList from "components/Records/RecordList/CheckList";
 
+import records from "assets/images/records.jpg";
+import evictionSampleReport from "assets/images/eviction-sample-report-2023.png";
 
 const TenantReport = (props) => {
-  const { 
-    heading, 
-    description, 
-    isEvictionRecord=false, 
-    recordList=[], 
-    isScreening=false, 
-    buttonText 
+  const {
+    heading,
+    description,
+    isEvictionRecord=false,
+    recordList=[],
+    isScreening=false,
+    buttonText
   } = props;
 
   return (

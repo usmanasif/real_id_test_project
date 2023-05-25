@@ -1,7 +1,9 @@
 import React from "react";
-import bbbLogo from "../../../shared/images/bbb-logo.png";
-import MenuItem from "../../Header/NavBar/MenuItem";
-import ContactInfo from "./ContactInfo";
+
+import MenuItem from "components/Layouts/Header/NavBar/MenuItem";
+import ContactInfo from "components/Layouts/Footer/BottomSection/ContactInfo";
+
+import bbbLogo from "assets/images/bbb-logo.png";
 
 const Copyright = () => {
   return (

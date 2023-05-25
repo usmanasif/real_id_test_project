@@ -1,6 +1,6 @@
 import React from "react";
-import TopNav from "./TopNav";
-import MenuItem from "./MenuItem";
+import TopNav from "components/Layouts/Header/NavBar/TopNav";
+import MenuItem from "components/Layouts/Header/NavBar/MenuItem";
 
 const NavBar = (props) => {
   const {

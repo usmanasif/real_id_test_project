@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Checklist from "components/Pricing/PriceList/Checklist";
-import star from "shared/images/star.png";
-import { addToCartButtonText } from "constants/sharedConstants";
+
 import {toast} from "react-toastify"
+import { useNavigate } from "react-router-dom";
+
+import Checklist from "components/Pricing/PriceList/Checklist";
+
+import { ADD_TO_CART_BUTTON_TEXT } from "constants/sharedConstants";
+import star from "assets/images/star.png";
 
 const PriceListItem = (props) => {
   const {
@@ -82,7 +85,7 @@ const PriceListItem = (props) => {
       <div className="price-foot">
         <div className="btn">
           <a onClick={handleCartItemCount} className="buybtn">
-            {isEvictionRecord && addToCartButtonText || buttonText}
+            {isEvictionRecord && ADD_TO_CART_BUTTON_TEXT || buttonText}
           </a>
         </div>
       </div>

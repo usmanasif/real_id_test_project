@@ -1,7 +1,9 @@
 import React from "react";
+
 import InstantPrice from "components/Pricing/PriceList/InstantPrice";
 import PriceListItem from "components/Pricing/PriceList/PriceListItem";
-import { addToCartButtonText, rentalEvictionHistory } from "constants/sharedConstants";
+
+import { ADD_TO_CART_BUTTON_TEXT, RENTAL_EVICTION_HISTORY } from "constants/sharedConstants";
 
 const Pricing = (props) => {
   const {
@@ -38,7 +40,7 @@ const Pricing = (props) => {
           <PriceListItem
             checkPoints={rentalHistory || creditCheckList}
             heading={rentalHistoryHeading ?? creditCheckListHeading}
-            subHeading={rentalEvictionHistory}
+            subHeading={RENTAL_EVICTION_HISTORY}
             buttonLink="#"
             setItemCount={setItemCount}
             buttonText={buttonTextFirst}
@@ -47,7 +49,7 @@ const Pricing = (props) => {
             isEvictionRecord={isEvictionRecord}
           />
           <PriceListItem
-            isEvictionReport={true}
+            isEvictionReport
             heading={packageListHeading ?? evictionReportHeading}
             checkPoints={evictionReport ?? packageList}
             buttonLink="#"
@@ -65,15 +67,15 @@ const Pricing = (props) => {
               heading={backgroundCheckHeading}
               subHeading={backgroundCheck}
               buttonLink="#"
-              isBackgroundCheck={true}
+              isBackgroundCheck
               setItemCount={setItemCount}
               itemCount={itemCount}
               amount={rentalAmount}
-              buttonText={addToCartButtonText}
+              buttonText={ADD_TO_CART_BUTTON_TEXT}
               isEvictionRecord={isEvictionRecord}
             />
           }
-            
+
           {!isEvictionRecord && <InstantPrice />}
         </ul>
       </div>

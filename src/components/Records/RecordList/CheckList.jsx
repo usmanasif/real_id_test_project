@@ -32,12 +32,12 @@ const CheckList = (props) => {
           {!isScreening && (
             <>
               <h5>You’ll have access to:</h5>
-              <div className={isEvictionRecord && "" || "checkwrap"}>
-                <ul className={isEvictionRecord && "access-listing two-col" || "access-listing"} >
+              <div className={isEvictionRecord ? "" : "checkwrap"}>
+                <ul className={isEvictionRecord ? "access-listing two-col" : "access-listing"} >
                   <Checklist checkPoints={recordList} />
                 </ul>
                 {recordListRight.length > 0 && (
-                  <ul className={isEvictionRecord && "access-listing two-col" || "access-listing"} >
+                  <ul className={isEvictionRecord ? "access-listing two-col" : "access-listing"} >
                     <Checklist checkPoints={recordListRight} />
                   </ul>
                 )}

@@ -1,7 +1,8 @@
 import React from "react";
-import clientOne from "shared/images/cl_01.png";
-import clientTwo from "shared/images/cl_02.png";
-import clientThree from "shared/images/cl_03.png";
+
+import clientOne from "assets/images/cl_01.png";
+import clientTwo from "assets/images/cl_02.png";
+import clientThree from "assets/images/cl_03.png";
 
 const ClientInfo = () => {
 
@@ -17,4 +18,3 @@ const ClientInfo = () => {
 };
 
 export default ClientInfo;
- 

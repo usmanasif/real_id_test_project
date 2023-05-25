@@ -1,6 +1,7 @@
 import React from "react";
+
 import ClientInfo from "components/Clients/ClientInfo";
-import { reviewStarCount } from "constants/sharedConstants";
+import { REVIEW_STAR_COUNT } from "constants/sharedConstants";
 
 const Review = (props) => {
   const {
@@ -21,7 +22,7 @@ const Review = (props) => {
                     <div className="sa_review" >
                       <div className="sa_info">
                         <span>
-                          {Array.from(Array(reviewStarCount), (_, index) => (
+                          {Array.from(Array(REVIEW_STAR_COUNT), (_, index) => (
                             <span key={index} className="sa_star sa_activestar" />
                           ))}
                         </span>

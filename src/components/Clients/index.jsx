@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+
 import Review from "components/Clients/Reviews";
-import { interval } from "constants/sharedConstants";
+import { INTERVAL } from "constants/sharedConstants";
 
 const Clients = (props) => {
   const {
@@ -30,7 +31,7 @@ const Clients = (props) => {
 
   const timeoutId = setTimeout(() => {
     setUpdated(!updated);
-  }, interval);
+  }, INTERVAL);
 
   return (
     <div className="client-logo" >

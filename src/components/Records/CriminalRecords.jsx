@@ -1,14 +1,17 @@
 import React from "react";
-import criminalRecords from "shared/images/criminal-records.jpg";
-import criminalSampleReport from "shared/images/criminal-sample-report-2023.png";
+
 import Banner from "components/Records/RecordList/Banner";
 import RecordCheckList from "components/Records/RecordList/CheckList";
+
 import {
-  criminalRecordHeading,
-  criminalRecordDescription,
-  criminalRecordList
+  CRIMINAL_RECORD_HEADING,
+  CRIMINAL_RECORD_DESCRIPTION,
+  CRIMINAL_RECORD_LIST
 } from "constants/recordConstants";
-import { tenantButtonText } from "constants/sharedConstants";
+import { TENNANT_BUTTON_TEXT } from "constants/sharedConstants";
+
+import criminalRecords from "assets/images/criminal-records.jpg";
+import criminalSampleReport from "assets/images/criminal-sample-report-2023.png";
 
 const CriminalRecords = () => {
   return (
@@ -17,11 +20,12 @@ const CriminalRecords = () => {
         <div className="contents">
           <div className="col tenant-left">
             <RecordCheckList
-              recordHeading={criminalRecordHeading}
-              recordDescription={criminalRecordDescription}
-              recordList={criminalRecordList}
-              buttonText={tenantButtonText}
-              isCriminalRecord={true}
+              recordHeading={CRIMINAL_RECORD_HEADING}
+              recordDescription={CRIMINAL_RECORD_DESCRIPTION}
+              recordList={CRIMINAL_RECORD_LIST}
+              buttonText={TENNANT_BUTTON_TEXT}
+              isCriminalRecord
+              isEvictionRecord
             />
           </div>
 

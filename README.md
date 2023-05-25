@@ -32,7 +32,7 @@ npm test
 
 ## How to Start
 
-#### ( **Important** : React Version should be 18.2.0)
+#### ( **Important** : React Version should be 18.2.0 and Node version is v14.18.3)
 
 To get started with the Rtenant app, please follow the instructions below:
 

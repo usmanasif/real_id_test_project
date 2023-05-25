@@ -1,4 +1,5 @@
 import React from "react";
+
 import Banner from "components/Records/RecordList/Banner";
 import RecordCheckList from "components/Records/RecordList/CheckList";
 import SignUpForm from "components/CreditChecks/SignUp/Form";
@@ -26,7 +27,7 @@ const TenantInformation = (props) => {
         </div>
 
         <div className="flRight hero-right">
-          {isCreditCheck && <SignUpForm />} 
+          {isCreditCheck && <SignUpForm />}
           <Banner record={rightImage} />
         </div>
       </div>

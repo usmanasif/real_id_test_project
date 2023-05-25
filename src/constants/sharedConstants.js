@@ -1,27 +1,27 @@
-export const interval = 5000;
+export const INTERVAL = 5000;
 
-export const reviewStarCount = 5;
+export const REVIEW_STAR_COUNT = 5;
 
-export const screeningButtonText = "Get Started"
+export const SCREENING_BUTTON_TEXT = "Get Started"
 
-export const creditButtonTextFirst = "Buy Now"
+export const CREDIT_BUTTON_TEXT_FIRST = "Buy Now"
 
-export const creditButtonTextSecond = "Sign up"
+export const CREDIT_BUTTON_TEXT_SECOND = "Sign up"
 
-export const creditOldPrice = "50.00"
+export const CREDIT_OLD_PRICE = "50.00"
 
-export const creditSignUpButtonText = "Sign Up, It’s FREE"
+export const CREDIT_SIGN_UP_BUTTON_TEXT = "Sign Up, It’s FREE"
 
-export const tenantButtonText = "Buy Instant Reports"
+export const TENNANT_BUTTON_TEXT = "Buy Instant Reports"
 
-export const evictionOldPrice = "41.90"
+export const EVICTION_OLD_PRICE = "41.90"
 
-export const instantPrice = "20.95"
+export const INSTANT_PRICE = "20.95"
 
-export const addToCartButtonText = "Add to Cart"
+export const ADD_TO_CART_BUTTON_TEXT = "Add to Cart"
 
-export const rentalEvictionHistory = "Rental Eviction History"
+export const RENTAL_EVICTION_HISTORY = "Rental Eviction History"
 
-export const backgroundCheck = "Background Check"
+export const BACKGROUND_CHECK = "Background Check"
 
 

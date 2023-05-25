@@ -1,7 +1,8 @@
 import React from "react";
+
 import {
-  creditButtonTextFirst,
-  instantPrice
+  CREDIT_BUTTON_TEXT_FIRST,
+  INSTANT_PRICE
 } from "constants/sharedConstants";
 
 const InstantPrice = () => {
@@ -9,11 +10,11 @@ const InstantPrice = () => {
   return (
     <ul className="eviction-reports">
       <li>
-        Instant Background Checks or Eviction Reports.  
-        <strong className="underline">${instantPrice}5</strong>
+        Instant Background Checks or Eviction Reports.
+        <strong className="underline">${INSTANT_PRICE}5</strong>
       </li>
       <li>
-        <a href="#" className="buybtn">{creditButtonTextFirst}</a>
+        <a href="#" className="buybtn">{CREDIT_BUTTON_TEXT_FIRST}</a>
       </li>
     </ul>
   );

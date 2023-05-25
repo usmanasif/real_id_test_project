@@ -1,37 +1,39 @@
 import React, { useState } from "react";
-import Header from "../../Layouts/Header/Header.jsx";
-import Footer from "../../Layouts/Footer/Footer.jsx";
-import Pricing from "../Pricing/index.jsx";
-import Clients from "../Clients/index.jsx";
-import CriminalRecords from "../Records/CriminalRecords.jsx";
-import TenantReport from "../Records/TenantReport.jsx";
-import TenantInformation from "../Records/TenantInformation.jsx";
-import map from "../../shared/images/map.jpg";
+
+import Header from "components/Layouts/Header/Header.jsx";
+import Footer from "components/Layouts/Footer/Footer.jsx";
+import Pricing from "components/Pricing/index.jsx";
+import Clients from "components/Clients/index.jsx";
+import CriminalRecords from "components/Records/CriminalRecords.jsx";
+import TenantReport from "components/Records/TenantReport.jsx";
+import TenantInformation from "components/Records/TenantInformation.jsx";
 
 import {
-  evictionHistoryHeading,
-  evictionHistorySubHeading,
-  evictionHistoryDescription,
-  evictionRecordHeading,
-  evictionRecordDescription,
-  evictionRecordList
-} from "../../constants/recordConstants.js";
+  EVICTION_HISTORY_HEADING,
+  EVICTION_HISTORY_SUB_HEADING,
+  EVICTION_HISTORY_DESCRIPTION,
+  EVICTION_RECORD_HEADING,
+  EVICTION_RECORD_DESCRIPTION,
+  EVICTION_RECORD_LIST
+} from "constants/recordConstants.js";
 import {
-  evictionPriceDescription,
-  evictionPriceHeading,
-  evictionReport,
-  backgroundCheck,
-  rentalHistory,
-  evictionReportHeading,
-  backgroundCheckHeading,
-  rentalHistoryHeading,
-  evictionReportAmount,
-  rentalAmount
-} from "../../constants/priceConstants.js";
+  EVICTION_PRICE_DESCRIPTION,
+  EVICTION_PRICE_HEADING,
+  EVICTION_REPORT,
+  BACKGROUND_CHECK,
+  RENTAL_HISTORY,
+  EVICTION_REPORT_HEADING,
+  BACKGROUND_CHECK_HEADING,
+  RENTAL_HISTORY_HEADING,
+  EVICTION_REPORT_AMOUNT,
+  RENTAL_AMOUNT
+} from "constants/priceConstants.js";
 import {
-  evictionOldPrice,
-  tenantButtonText,
-} from "../../constants/sharedConstants.js";
+  EVICTION_OLD_PRICE,
+  TENNANT_BUTTON_TEXT,
+} from "constants/sharedConstants.js";
+
+import map from "assets/images/map.jpg";
 
 const EvictionReportsHome = () => {
   const count = JSON.parse(window.localStorage.getItem('itemCount')) || 0;
@@ -39,42 +41,43 @@ const EvictionReportsHome = () => {
 
   return (
     <div className="site-fluid">
-      <Header itemCount={itemCount} isEvictionReport={true} />
+      <Header itemCount={itemCount} isEvictionReport />
       <TenantInformation
-        isTenantInformation={true}
-        recordHeading={evictionHistoryHeading}
-        recordSubHeading={evictionHistorySubHeading}
-        recordDescription={evictionHistoryDescription}
+        isTenantInformation
+        recordHeading={EVICTION_HISTORY_HEADING}
+        recordSubHeading={EVICTION_HISTORY_SUB_HEADING}
+        recordDescription={EVICTION_HISTORY_DESCRIPTION}
         rightImage={map}
       />
 
       <TenantReport
-        heading={evictionRecordHeading}
-        recordDescription={evictionRecordDescription}
-        recordList={evictionRecordList}
-        isEvictionRecord={true}
-        buttonText={tenantButtonText}
+        heading={EVICTION_RECORD_HEADING}
+        description={EVICTION_RECORD_DESCRIPTION}
+        recordList={EVICTION_RECORD_LIST}
+        isEvictionRecord
+        buttonText={TENNANT_BUTTON_TEXT}
       />
 
-      <CriminalRecords />
+      <CriminalRecords isEvictionRecord/>
+
       <Pricing
         setItemCount={setItemCount}
         itemCount={itemCount}
-        priceHeading={evictionPriceHeading}
-        priceDescription={evictionPriceDescription}
-        evictionReport={evictionReport}
-        backgroundCheck={backgroundCheck}
-        rentalHistory={rentalHistory}
-        isEvictionRecord={true}
-        evictionReportHeading={evictionReportHeading}
-        backgroundCheckHeading={backgroundCheckHeading}
-        rentalHistoryHeading={rentalHistoryHeading}
-        rentalAmount={rentalAmount}
-        oldPrice={evictionOldPrice}
-        evictionReportAmount={evictionReportAmount}
+        priceHeading={EVICTION_PRICE_HEADING}
+        priceDescription={EVICTION_PRICE_DESCRIPTION}
+        evictionReport={EVICTION_REPORT}
+        backgroundCheck={BACKGROUND_CHECK}
+        rentalHistory={RENTAL_HISTORY}
+        isEvictionRecord
+        evictionReportHeading={EVICTION_REPORT_HEADING}
+        backgroundCheckHeading={BACKGROUND_CHECK_HEADING}
+        rentalHistoryHeading={RENTAL_HISTORY_HEADING}
+        rentalAmount={RENTAL_AMOUNT}
+        oldPrice={EVICTION_OLD_PRICE}
+        evictionReportAmount={EVICTION_REPORT_AMOUNT}
       />
 
-      <Clients clientImages={true} />
+      <Clients clientImages />
       <Footer />
     </div>
   );
